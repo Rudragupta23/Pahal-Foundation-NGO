@@ -1,0 +1,74 @@
+{% extends 'content/dashboard.html' %}
+{% block body %}
+<style>
+  label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #333;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+</style>
+<div class="form-container">
+  <h2>Student Admission Form</h2>
+  <div>
+    {% if messages %}
+    <div>
+      {% for message in messages %}
+      {{message}}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  <form enctype="multipart/form-data" method="post" id="student_form">
+    {% csrf_token %}
+    <label for="id_roll_no">Registration Number</label>
+    <input type="number" name="roll_no" id="id_roll_no" required>
+
+    <label for="id_name">Student Name</label>
+    <input type="text" name="name" maxlength="40" id="id_name" required>
+
+    <label for="id_parents_name">Parent's Name</label>
+    <input type="text" name="parents_name" maxlength="40" id="id_parents_name" required>
+
+    <label for="id_age">Age</label>
+    <input type="number" name="age" id="id_age" required>
+
+    <label for="id_gender">Gender</label>
+    <select name="gender" id="id_gender" required>
+      <option value="">--Select--</option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="id_photo">Upload Photo</label>
+    <input type="file" name="photo" accept="image/*" aria-invalid="true" id="id_photo" required>
+
+    <label for="admission_date">Date of Admission</label>
+    <input type="date" id="admission_date" name="date" required>
+
+    <label for="id_phone_no">Contact Number</label>
+    <input type="text" name="phone_no" maxlength="12" id="id_phone_no" pattern="[0-9]{10}" required>
+
+    <label for="id_address">Residential Address</label>
+    <textarea name="address" maxlength="40" id="id_address"></textarea>
+
+    <label for="id_grade">Class/Grade</label>
+    <input type="text" name="grade" maxlength="10" id="id_grade">
+
+    <label for="id_prev_school">Previous School (if any)</label>
+    <input type="text" name="prev_school" maxlength="30" id="id_prev_school">
+<!--      {{form.as_p}}-->
+
+    <button class="submit-btn" type="submit">Submit Admission Form</button>
+    </form>
+</div>
+
+{% endblock body %}

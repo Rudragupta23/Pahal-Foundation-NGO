@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'content/css/base-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'content/css/video_playing.css' %}">
+    <link rel="stylesheet" href="{% static 'pahal/css/responsive-styles.css' %}">
+    <link rel="icon" type="image/icon" href="{% static 'pahal/icon/favicon.ico' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+{{request.first_name}}
+    <nav class="nav-bar h-nav-resp">
+        <div class="logo">
+            <img class="name-home-res pizza r-pizza-resp" src="{% static 'pahal/img/logo.jpeg' %}" alt="Pahal Foundation Logo">
+            <a class="name-res" href="/">Pahal Foundation VITB</a>
+        </div>
+
+        <ul class="nav-links nav-links-res">
+            <li class="name-home-res"><a href="/">Home</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+            <li><a href="/error404" >Videos</a></li>
+            <li><a href="/error404">Gallery</a></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="/dashboard/profile">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/login">Login</a></li>
+            {% endif %}
+            <li><a href="/donate" class="active">Donate</a></li>
+        </ul>
+    </nav>
+        {% block body %}{% endblock body %}
+    <script src="{% static 'content/js/main.js' %}"></script>
+</body>
+</html>         

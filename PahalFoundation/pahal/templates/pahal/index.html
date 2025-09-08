@@ -1,0 +1,148 @@
+{% extends 'pahal/base.html' %}
+{% block title %} VITB Pahal Foundation {% endblock title %}
+{% block body %}
+{% load static %}
+   <header class="hero">
+        <div class="slider-wrapper">
+            <div class="text-overlay">
+                <h1 class="fade-in">Empowering Communities</h1>
+                <p class="fade-in">Building a better future through education and support</p>
+            </div>
+            <div class="slider">
+                <div class="slide"><img src="{% static 'pahal/img/img1.jpg' %}" alt="Children making peace signs"></div>
+                <div class="slide"><img src="{% static 'pahal/img/img2.jpg' %}" alt="Children sitting together"></div>
+                <div class="slide"><img src="{% static 'pahal/img/img3.jpg' %}" alt="Students in uniforms"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="section-title">Our Mission</h2>
+                <div class="mission-content">
+                    <div class="mission-text scroll-reveal">
+                        <p>At Pahal Foundation, we believe in the power of education to transform lives. Our mission is to provide quality education and support to underprivileged children, ensuring they have the tools and opportunities they need to build a brighter future.</p>
+                        <div class="mission-stats">
+                            <div class="stat">
+                                <span class="counter" data-target="1000">0</span>
+                                <p>Children Supported</p>
+                            </div>
+                            <div class="stat">
+                                <span class="counter" data-target="50">0</span>
+                                <p>Communities Reached</p>
+                            </div>
+                            <div class="stat">
+                                <span class="counter" data-target="10">0</span>
+                                <p>Years of Service</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card scroll-reveal">
+                        <i class="fas fa-heart"></i>
+                        <h3>Compassion</h3>
+                        <p>We lead with empathy and understanding in everything we do.</p>
+                    </div>
+                    <div class="value-card scroll-reveal">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Community</h3>
+                        <p>Building strong relationships and fostering community growth.</p>
+                    </div>
+                    <div class="value-card scroll-reveal">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>Education</h3>
+                        <p>Providing quality education as a foundation for success.</p>
+                    </div>
+                    <div class="value-card scroll-reveal">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Growth</h3>
+                        <p>Nurturing potential and fostering continuous development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member scroll-reveal">
+                        <div class="member-image">
+                            <img src="{% static 'pahal/img/sumit_sir.jpeg' %}" alt="Team Member">
+                        </div>
+                        <h3>Sumit Sir</h3>
+                        <p>Founder & Director</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sumitmittal15/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/sumit_49/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member scroll-reveal">
+                        <div class="member-image">
+                            <img src="{% static 'pahal/img/nirmala_mam.jpeg' %}" alt="Team Member">
+                        </div>
+                        <h3>E.Nirmala mam</h3>
+                        <p>Education Director</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="container">
+                <h2 class="section-title">Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-content">
+                            <h3>2025</h3>
+                            <p>We had our best Saraswati Puja</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-content">
+                            <h3>2024</h3>
+                            <p>2024 batch volunteer's first meetup</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-content">
+                            <h3>2024</h3>
+                            <p>E.Nirmala mam distributed food</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-content">
+                            <h3>2023</h3>
+                            <p>We start of our journey on Dec 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content scroll-reveal">
+                    <h2>Join Us in Making a Difference</h2>
+                    <p>Together, we can create positive change in our communities.</p>
+                    <div class="cta-buttons">
+                        <a href="/donate" class="btn primary-btn">Donate Now</a>
+                        <a href="/volunteer" class="btn secondary-btn">Volunteer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock body %}

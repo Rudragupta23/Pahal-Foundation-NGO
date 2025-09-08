@@ -1,0 +1,29 @@
+{% extends 'content/dashboard.html' %}
+{% block body %}
+{% load static %}
+<div class="container">
+    {{form.media}}
+    <h1>Create Your new Blog here!!</h1>
+    <div>
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+
+        <label>Title:</label>
+        {{form.title}}
+
+        <label>Content:</label>
+        {{form.content}}
+
+        <button type="submit" class="submit-btn">Post your Blog</button>
+    </form>
+</div>
+
+{% endblock body %}
