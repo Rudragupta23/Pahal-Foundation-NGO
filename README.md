@@ -13,6 +13,6 @@ This website for Pahal Foundation has been thoughtfully designed to showcase the
 
 **Server:** Python, Django, MySql-Online, AWS-S3
 
-**Paymnt:** RazorPay
+**Payment:** RazorPay
 
 **Others Tech Used:** Git, GitHub, Docker, Render
